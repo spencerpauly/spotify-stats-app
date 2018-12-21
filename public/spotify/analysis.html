@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotify Stats</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/style.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark projectHeader">
+        <a class="navbar-brand link-back" href="http://spencerpauly.com">
+        <!--<img src="../images/home.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        -->   
+        <i class="fa fa-home"></i> / spotify
+        </a>
+    </nav>
+    <div class="row">
+        <div class=" col-md-12 statistics-header hidden1">
+            <h1 class="display-1">Spotify Statistics</h1>
+            <!--<p>Created By Spencer Pauly</p>-->
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-3 mt-5">
+            <div class="col-md-7 mt-3 hidden1">
+                <p class="lead">This project allows you to view your spotify statistics.
+                    Currently, this means you can view your top 50 tracks and artists from various time periods. If
+                    you find this project useful, and have a suggestion or comment feel free to contact me at the link below.
+                    
+                </p>
+                <a href="http://www.spencerpauly.com/" target="_blank">
+                    <button type="button" class="btn btn-outline-dark" id="contact-me">Contact Me</button>
+                </a>
+            </div>
+            <div class="col-md-5 hidden2 mt-3">
+                <div class="card">
+                    <div class="card-body">
+                        <b id="keyHeader">Key</b>
+                        <ul class="keyList">
+                            <li>Short-Term: Past Month</li>
+                            <li>Medium-Term: Past 6 Months</li>
+                            <li>Long-Term: All-Time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mt-3 mb-5 hidden3 chartCol">
+                <h3 class="center">Top Songs</h3>
+                <div class="btn-group chart-selector" id="track-chart-buttons" role="group" aria-label="Top Track Buttons">
+                    <button type="button" class="btn btn-outline-dark" id="get-tracks-s">Short-Term</button>
+                    <button type="button" class="btn btn-outline-dark" id="get-tracks-m">Medium-Term</button>
+                    <button type="button" class="btn btn-outline-dark" id="get-tracks-l">Long-Term</button>
+                </div>
+                <div id="track-chart-wrapper" style="display:none">
+                    <table class="top-chart table table-sm table-hover" id="track-chart"></table>
+                    </table>
+                </div>
+                <div id="download-btn-wrapper" style="display:none">
+                    <p>We've curated a personalized playlist of your top 50 
+                        <span id="term-length"></span>
+                    bangers. Click the button below to add this playlist to your account on spotify: </p>
+                    <button type="button" class="btn btn-spotify" id="track-download-btn">Add Playlist To My Spotify</button>
+                </div>
+            </div>
+            <div class="col-md-6 mb-5 hidden3 chartCol">
+                <h3 class="center">Top Artists</h3>
+                <div class="btn-group chart-selector" id="artist-chart-buttons" role="group" aria-label="Top Artist Buttons">
+                    <button type="button" class="btn btn-outline-dark" id="get-artists-s">Short-Term</button>
+                    <button type="button" class="btn btn-outline-dark" id="get-artists-m">Medium-Term</button>
+                    <button type="button" class="btn btn-outline-dark" id="get-artists-l">Long-Term</button>
+                </div>
+                <div id="artist-chart-wrapper" style="display:none"></div>
+                    <table class="top-chart table table-sm table-hover" id="artist-chart" style="display:none"></table>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="../js/design.js"></script>
+    <script src="../js/analysis.js"></script>
+    <script src="../js/download.js"></script>
+  </body>
+</html>
