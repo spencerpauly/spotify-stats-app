@@ -193,13 +193,13 @@ function getSpotifyItems(arr, type, durationName, durationNum) {
 
 function displayItems(items, type) {
   var currentChart;
-    var maxVal = 10;
+    var maxVal = 50;
 
   if (type === "tracks") {
     currentChart = $("#track-chart");
   } else {
     currentChart = $("#artist-chart");
-    maxVal = 25;
+    maxVal = 50;
   }
 
   currentChart.empty();
