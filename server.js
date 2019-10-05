@@ -8,9 +8,9 @@ var app = express();
 
 // init Spotify API wrapper
 var PORT = 80;
-var CLIENT_ID = '<ENTER_YOUR_CLIENT_ID_HERE>';
-var CLIENT_SECRET = '<ENTER_YOUR_CLIENT_SECRET_HERE>';
-var URL = 'http://spencerpauly.com:' + PORT + '/spotify';
+var CLIENT_ID = '7182842a6a664b03917c1ca416af7453';
+var CLIENT_SECRET = 'd87d7427af46422486152526fd5903c0';
+var URL = 'http://localhost:' + PORT + '';
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
