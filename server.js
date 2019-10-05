@@ -7,10 +7,17 @@ var express = require('express');
 var app = express();
 
 // init Spotify API wrapper
+<<<<<<< HEAD
 var PORT = 3001;
 var CLIENT_ID = '';
 var CLIENT_SECRET = '';
 var REDIRECT_URL = 'https://spotify.spencerpauly.com';
+=======
+var PORT = 80;
+var CLIENT_ID = '';
+var CLIENT_SECRET = '';
+var URL = 'https://server.spencerpauly.com';
+>>>>>>> 5dcc4bd5ee177aef27fcaf37bcf5fdaefd195f45
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
