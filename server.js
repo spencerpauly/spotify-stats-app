@@ -7,10 +7,10 @@ var express = require('express');
 var app = express();
 
 // init Spotify API wrapper
-var PORT = 80;
-var CLIENT_ID = '<ENTER_YOUR_CLIENT_ID_HERE>';
-var CLIENT_SECRET = '<ENTER_YOUR_CLIENT_SECRET_HERE>';
-var URL = 'http://spencerpauly.com:' + PORT + '/spotify';
+var PORT = 3001;
+var CLIENT_ID = '';
+var CLIENT_SECRET = '';
+var REDIRECT_URL = 'https://spotify.spencerpauly.com';
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
@@ -31,7 +31,7 @@ const redirectUriParameters = {
   client_id: CLIENT_ID,
   response_type: 'token',
   scope: jssdkscopes.join(' '),
-  redirect_uri: encodeURI(URL),
+  redirect_uri: encodeURI(REDIRECT_URL),
   show_dialog: true,
 }
 
@@ -77,7 +77,7 @@ app.get("/spotifyRedirectUri", function (request, response) {
   }, null, 2))
 });
 
-app.get("/features", function (request, response) {
+app.get("/spotify/features", function (request, response) {
   reAuthenticateOnFailure((failure) => {
     spotifyApi.getAudioFeaturesForTrack(request.query.id)
     .then(function(data) {
@@ -86,7 +86,7 @@ app.get("/features", function (request, response) {
   })
 });
 
-app.get("/analysis", function (request, response) {
+app.get("/spotify/analysis", function (request, response) {
   reAuthenticateOnFailure((failure) => {
     spotifyApi.getAudioAnalysisForTrack(request.query.id)
     .then(function(data) {
