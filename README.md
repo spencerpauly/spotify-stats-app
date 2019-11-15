@@ -5,7 +5,7 @@ This project was created to allow users to view a top-chart of their most listen
 
 Put your spotify CLIENT_ID and CLIENT_SECRET in server.js file from spotify API dashboard.
 ```
-npm start
+node server.js
 ```
 
 ## How to build/deploy
@@ -20,7 +20,7 @@ kill <pid>
 ```
 Start new spotify statistics process:
 ```
-setsid npm start -l 3001
+setsid node server.js -l 3001
 ```
 * CTRL+L to break from GUI
 
