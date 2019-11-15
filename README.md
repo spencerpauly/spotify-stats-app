@@ -3,30 +3,29 @@ This project was created to allow users to view a top-chart of their most listen
 
 ## How to run
 
+```
+npm start
+```
+
 ## How to build/deploy
 
-Get PID of process currently running on port
-
+Get PID of process currently running on port:
 ```
 lsof -i :3000
 ```
-Kill process
+Kill process:
 ```
 kill <pid>
 ```
-Start new spotify statistics process
+Start new spotify statistics process:
 ```
 setsid npm start -l 3001
 ```
-```
-CTRL+L to break from GUI
-```
+* CTRL+L to break from GUI
 
-
-
-'''
 
 ## Potential bugs/security risks
+Must make sure spotify public/private key is not commmitted to git repository.
 
 ## Future todo
 
