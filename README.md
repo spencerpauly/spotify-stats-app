@@ -12,7 +12,7 @@ node server.js
 
 Get PID of process currently running on port:
 ```
-lsof -i :3000
+lsof -i :3001
 ```
 Kill process:
 ```
