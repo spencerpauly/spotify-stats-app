@@ -7,20 +7,20 @@ This project was created to allow users to view a top-chart of their most listen
 
 Get PID of process currently running on port
 
-'''
+```
 lsof -i :3000
-'''
+```
 Kill process
-'''
+```
 kill <pid>
-'''
+```
 Start new spotify statistics process
-'''
+```
 setsid npm start -l 3001
-'''
-'''
+```
+```
 CTRL+L to break from GUI
-'''
+```
 
 
 
